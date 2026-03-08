@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Produção</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bamboo.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bamboo.css/dist/light.min.css"
+    />
+    <style>
+      body {
+        width: 100%;
+        max-width: 70%;
+      }
+
+      .invalid {
+        background-color: crimson;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <table>
+      <tr>
+        <td style="width: 7ch;">Carga:</td>
+        <td><input type="text" id="load-id" size="10" placeholder="000000" /></td>
+      </tr>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Venda</th>
+          <th>Bonificação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <textarea id="sale-summary" rows="6" cols="80" readonly></textarea
+            ><br /><br />
+            <button id="copy-sale">Copiar</button>
+          </td>
+          <td>
+            <textarea id="bonus-summary" rows="6" cols="80" readonly></textarea
+            ><br /><br />
+            <button id="copy-bonus">Copiar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <table>
+      <thead>
+        <!--<tr>
+          <td>Carga:</td>
+          <td colspan="5">
+            <input type="text" id="load-id" size="10" placeholder="000000" />
+          </td>
+        </tr>-->
+        <tr>
+          <th>Produto</th>
+          <th>Lote</th>
+          <th>Data</th>
+          <th>Qtd(Plts)</th>
+          <th>Bonificação(Un)</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="batch"></tbody>
+      <tfoot>
+        <tr>
+          <td><input id="add-button" type="button" value="Add" /></td>
+        </tr>
+        <tr>
+          <td id="total" colspan="6"></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <template id="batch-template">
+      <tr class="batch-row">
+        <td>
+          <select class="product-name updatable"></select>
+        </td>
+        <td>
+          <input
+            class="batch-code updatable invalid"
+            type="text"
+          />
+        </td>
+        <td><input class="expiration-date updatable" type="date" /></td>
+        <td><input class="quantity updatable" type="number" /></td>
+        <td><input class="bonus updatable" type="number" /></td>
+        <td><input class="delete-button" type="button" value="X" /></td>
+      </tr>
+    </template>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>
