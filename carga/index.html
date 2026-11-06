@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="neat.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="center">Cargas!!</h1>
+  <div class="drop-zone center">
+    <input type="file" name="drop" id="drop" style="display: none;">
+    <label for="drop">
+      ⏏ carregue ou arraste ou arquivo
+    </label>
+  </div>
+
+  <div id="tables-container"></div>
+
+  <template id="load-info-template">
+    <p>
+      <b>Data:</b> <span class="load-date"></span><br>
+      <b>Carga:</b> <span class="load-id"></span><br>
+      <b>Placa:</b> <span class="load-plate"></span><br>
+      <b>Transportadora:</b> <span class="load-carrier"></span>
+    </p>
+  </template>
+
+  <template id="product-section-template">
+    <h3 ></h3>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4" class="product-title">HELLO</th>
+        </tr>
+        <tr>
+          <th>Pedido</th>
+          <th>Cliente</th>
+          <th>Destino</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody class="orders-body"></tbody>
+      <tfoot>
+        <tr style="font-weight: bold; text-align: end;">
+          <td colspan="3">Total:</td>
+          <td class="product-total"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </template>
+
+  <template id="order-row-template">
+    <tr>
+      <td class="order-id"></td>
+      <td class="order-client"></td>
+      <td class="order-dest"></td>
+      <td class="order-qtd" style="text-align: end;"></td>
+    </tr>
+  </template>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

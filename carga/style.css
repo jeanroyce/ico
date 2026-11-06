@@ -1,0 +1,21 @@
+table,
+th,
+td {
+    border: 1px solid var(--dark);
+}
+
+.drop-zone label {
+    background-color: var(--lesslight);
+    padding: 20px;
+    display: block;
+}
+
+.drop-zone label:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.invert {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
